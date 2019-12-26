@@ -1,0 +1,183 @@
+
+.chatbox {
+    width: 500px;
+    min-width: 400px;
+    height: 600px;
+    padding: 2px;
+    margin: 20px auto;
+    box-shadow: 2px 5px #ccc;
+}
+.loglist{
+    padding: 5px;
+    width: 100%;
+    height: 300px;
+}
+.list-item{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.list-item .avatar {
+    width: 120px;
+    height: 120px;
+    background: #ccc;
+    border-radius: 50%;
+}
+.list-item .log {
+    width: 80px;
+    padding: 15px;
+    margin: 40px 5px auto;
+    background: #1ddced;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.round {
+    border-radius: 10px;
+}
+
+.margins {
+    margin-left: 90px;
+    margin-right: 120px;
+}
+.margin {
+    margin-left: 60px;
+    margin-right: 150px;
+}
+
+.chatinput{
+    width: 80%;
+    float: left;
+    border-radius: 0;
+}
+
+.chatform{
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: rgb(250, 253, 252);
+}
+  
+.chatform .chatcontrol{
+    float: left;
+    width: 100%;
+}
+.chatform .chatinput{
+    width: 80%;
+    float: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+  
+.chatform .sendbtn{
+    width: 100%;
+    float: left;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-transform: uppercase;
+}
+
+.log {
+    width: 70%;
+    padding: 25px;
+    margin: 30px 40px 20px 0;
+    background: rgb(144, 183, 255);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+.message {
+    font-size: 2em;
+    font-weight: 50;
+    margin-left: 89px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.avatar{
+    position: absolute;
+    width: 100px;
+    margin-right: 20px;
+}
+  
+.chatlist{
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 290px;
+    height: 140px;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4ef3cf;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+.slider:after {
+    position: absolute;
+    content: "";
+    height: 90px;
+    width: 90px;
+    left: 15px;
+    bottom: 25px;
+    background-image: url("/assets/happy.png");
+    -webkit-transition: .2s;
+    transition: .2s;
+    background-repeat: no-repeat;
+}
+  
+input:checked + .slider {
+    background-color: rgb(252, 217, 122);
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px rgb(231, 123, 51);
+}
+  
+input:checked + .slider:after{
+    -webkit-transform: translateX(170px);
+    -ms-transform: translateX(170px);
+    transform: translateX(170px);
+    background-image: url("/assets/sad.png");
+    align-content: center;
+}
+  
+/* Rounded sliders */
+.slider.round {
+    border-radius: 70px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.right{
+    position: absolute;
+    top: 25px; 
+    right: 50px;
+}
+.left{
+    position: absolute;
+    left: 200px;
+    bottom: 200px;
+}

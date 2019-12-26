@@ -1,0 +1,40 @@
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<div class="chatform right">
+  <div class="chatlist">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let msg of messages">
+        <img src = "{{msg.avatar}}" class="avatar">
+        <div class="message log">
+          {{ msg.content }}
+        </div>
+      </li>
+    </ul>
+    <div id="destination"></div>
+  </div>
+
+  <form (submit)="consoledot(message_content)" (submit)="sendMessage(message_content)" [ngx-scroll-to]="'destination'" class="chatcontrol">
+    <div class="input-group mb-3 round">
+      <input type="text" class="form-control chatinput" placeholder="Say something..." name="content" aria-label="Enter your Message" aria-describedby="Enter your Message" #message_content/>
+      <div class="input-group-append">
+        <button class="btn btn-primary sendbtn" (click)="consoledot(message_content)" (click)="sendMessage(message_content)" [ngx-scroll-to]="'destination'" type="button">Send</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="left">
+  <label class="switch">
+    <input type="checkbox" [(ngModel)] = "check">
+    <span class="slider round"></span>
+  </label>
+</div>
+<!-- Credit to Koushikmln github-->
